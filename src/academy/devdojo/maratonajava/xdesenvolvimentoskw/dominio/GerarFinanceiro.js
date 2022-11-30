@@ -12,7 +12,8 @@ query.nativeSelect("    SELECT\n" +
     "    , PPG.SEQUENCIA\n" +
     "    , PPG.PRAZO\n" +
     "    , PPG.CODTIPTITPAD\n" +
-    "    , Z.DTNEG + PRAZO AS DTVENC\n" +
+    "    , Z.DTNEG\n" +
+    "    , PRAZO AS DTVENC\n" +
     "    , Z.AD_NROOS\n" +
     "    , Z.AD_PROCESSADO\n" +
     "    , Z.CODBCO\n" +

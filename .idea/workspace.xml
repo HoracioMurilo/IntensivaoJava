@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13bedcac-e979-4e7f-a617-efa748661288" name="Changes" comment="Commit 30/11/2022">
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraCentroResultado.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraDataNegociacao.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraNatureza.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraTopBaixa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/PreencheNroAutorização.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/painel/css/relcomercial.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/painel/painel_SQA.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/Altera_NaturezaDev.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraCentroResultado.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/AlteraCentroResultado.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraDataNegociacao.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/AlteraDataNegociacao.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraNatureza.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/AlteraNatureza.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraTopBaixa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/AlteraTopBaixa.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/GerarFinanceiro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/GerarFinanceiro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/Modelo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/Modelo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/PreencheNroAutorização.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/PreencheNroAutorização.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/painel/css/relcomercial.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5/css/relcomercial.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/painel/painel_SQA.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5/painel_SQA.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,25 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/Meu Drive/Desenvolvimento SQA/02 - PROGRAMAÇÃO/04 - ALURA/Java&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/Meu Drive/Desenvolvimento SQA/02 - PROGRAMAÇÃO/20 - DevDojoJava/maratona-java/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\regranegocio" />
       <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\dominio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -171,7 +177,7 @@
       <workItem from="1669805484891" duration="6545000" />
       <workItem from="1669843522427" duration="1897000" />
       <workItem from="1670350452024" duration="5650000" />
-      <workItem from="1670501094304" duration="622000" />
+      <workItem from="1670501094304" duration="2400000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - InteliJ">
       <created>1667416661130</created>
@@ -236,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669844814016</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Commit 30/11/2022">
+      <created>1670501924253</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670501924253</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

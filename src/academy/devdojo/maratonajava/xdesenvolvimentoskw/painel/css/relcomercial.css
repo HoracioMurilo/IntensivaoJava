@@ -1,0 +1,157 @@
+.divTable {
+    display: table;
+    width: 100%;
+    top: 1px;
+}
+
+.divTableRow {
+    display: table-row;
+    width: 1%;
+}
+
+.divTableRows {
+    display: table-row;
+    width: 1%;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+}
+
+.divTableCell,
+.divTableHead {
+    display: table-cell;
+    padding: 7px 20px;
+    font-family: Arial;
+
+}
+
+.divTableCells,
+.divTableHead {
+    display: table-cell;
+    padding: 7px 20px;
+    font-family: Calibri;
+    font-size: 24px;
+}
+
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+
+.divTableBody {
+    display: table-row-group;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+
+}
+
+table {
+
+    page-break-inside: auto;
+    width: 100%;
+    height: 100px;
+    border: 2px solid;
+    border-radius:  10px 80px;
+    margin: 0px;
+    position: relative;
+}
+
+.cabtdtamanho {
+    text-align: left;
+    width: 150px;
+    padding: 2px;
+}
+
+.cabtdtamanho1 {
+    text-align: left;
+    width: 40%;
+    font-family: Calibri;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+h1{
+    text-align: center;
+    width: auto;
+    font-family: Calibri;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+.subtdtipo{
+    text-align: center;
+    width: auto;
+    font-family: Calibri;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.listatdtipo {
+
+    text-align: center;
+    width: auto;
+    font-family: Calibri;
+    font-size: 18px;
+    padding: 5px;
+    transition: 1s all;
+}
+
+.listatdtipolegenda {
+    padding: 100px 0;
+    text-align: left;
+    width: auto;
+    font-family: Calibri;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.listatdtipo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: green;
+    font-weight: bold;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+
+}

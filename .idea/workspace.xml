@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13bedcac-e979-4e7f-a617-efa748661288" name="Changes" comment="Commit 12-11">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/william/dev/arquivo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Wnio/test/NormalizeTest01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Wnio/test/PathTest01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Wnio/test/PathTest02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Wnio/test/RelativizeTest01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Wnio/test/ResolveTest01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="13bedcac-e979-4e7f-a617-efa748661288" name="Changes" comment="Commit 30/11/2022">
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraCentroResultado.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraDataNegociacao.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraNatureza.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraTopBaixa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/PreencheNroAutorização.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/painel/css/relcomercial.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/painel/painel_SQA.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +21,10 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -42,11 +43,14 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SQA CONTABIL - M.H.C/Desktop/Desenvolvimento&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Meu Drive/Desenvolvimento SQA/02 - PROGRAMAÇÃO/04 - ALURA/Java&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -54,16 +58,22 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\dominio" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\painel" />
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\painel\css" />
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\teste" />
       <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\home\william\dev" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="academy.devdojo.maratonajava.javacore.Uregex.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RelativizeTest01">
-    <configuration name="NormalizeTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.NormalizeTest01" />
+  <component name="RunManager" selected="Application.SimpleFileVisitorTest01 (4)">
+    <configuration name="SimpleFileVisitorTest01 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.SimpleFileVisitorTest01" />
       <module name="maratona-java" />
       <extension name="coverage">
         <pattern>
@@ -75,8 +85,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.PathTest01" />
+    <configuration name="SimpleFileVisitorTest01 (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.SimpleFileVisitorTest01" />
       <module name="maratona-java" />
       <extension name="coverage">
         <pattern>
@@ -88,8 +98,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathTest02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.PathTest02" />
+    <configuration name="SimpleFileVisitorTest01 (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.SimpleFileVisitorTest01" />
       <module name="maratona-java" />
       <extension name="coverage">
         <pattern>
@@ -101,8 +111,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RelativizeTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.RelativizeTest01" />
+    <configuration name="SimpleFileVisitorTest01 (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.SimpleFileVisitorTest01" />
       <module name="maratona-java" />
       <extension name="coverage">
         <pattern>
@@ -114,8 +124,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResolveTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.ResolveTest01" />
+    <configuration name="SimpleFileVisitorTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.SimpleFileVisitorTest01" />
       <module name="maratona-java" />
       <extension name="coverage">
         <pattern>
@@ -129,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RelativizeTest01" />
-        <item itemvalue="Application.ResolveTest01" />
-        <item itemvalue="Application.NormalizeTest01" />
-        <item itemvalue="Application.PathTest02" />
-        <item itemvalue="Application.PathTest01" />
+        <item itemvalue="Application.SimpleFileVisitorTest01 (4)" />
+        <item itemvalue="Application.SimpleFileVisitorTest01 (3)" />
+        <item itemvalue="Application.SimpleFileVisitorTest01 (2)" />
+        <item itemvalue="Application.SimpleFileVisitorTest01 (1)" />
+        <item itemvalue="Application.SimpleFileVisitorTest01" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +165,13 @@
       <workItem from="1668292324877" duration="6624000" />
       <workItem from="1668656081908" duration="81000" />
       <workItem from="1669083694467" duration="1494000" />
-      <workItem from="1669170018396" duration="11732000" />
+      <workItem from="1669170018396" duration="13407000" />
+      <workItem from="1669717493739" duration="15881000" />
+      <workItem from="1669756008787" duration="13000" />
+      <workItem from="1669805484891" duration="6545000" />
+      <workItem from="1669843522427" duration="1897000" />
+      <workItem from="1670350452024" duration="5650000" />
+      <workItem from="1670501094304" duration="622000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - InteliJ">
       <created>1667416661130</created>
@@ -171,7 +187,56 @@
       <option name="project" value="LOCAL" />
       <updated>1668294155554</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit 12-11">
+      <created>1669632466855</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669632466855</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit 12-11">
+      <created>1669751097650</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669751097650</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit 12-11">
+      <created>1669755552476</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669755552477</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Alteração da Consulta">
+      <created>1669810072242</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669810072242</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit 30/11/2022">
+      <created>1669840683755</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669840683755</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Commit 30/11/2022">
+      <created>1669840722177</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669840722177</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit 30/11/2022">
+      <created>1669844814016</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669844814016</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +268,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit - InteliJ" />
     <MESSAGE value="Commit 12-11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 12-11" />
+    <MESSAGE value="Alteração da Consulta" />
+    <MESSAGE value="Commit 30/11/2022" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 30/11/2022" />
   </component>
 </project>

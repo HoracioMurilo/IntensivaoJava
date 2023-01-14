@@ -1,23 +1,23 @@
 WITH NATUREZA_PAI AS (SELECT CODNAT
                            , CODNATPAI
-                           , CONCAT(CODNAT, ' - ', DESCRNAT)                                  AS DESCRNAT
+                           , CONCAT(CODNAT, ' - ', DESCRNAT)                                   AS DESCRNAT
                            , NOME_CLASSIFICADOR
                            , ORDEM
-                           , SUM(CASE WHEN MONTH(DTNEG) = 01 THEN VALOR ELSE 0 END)           AS JANEIRO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 02 THEN VALOR ELSE 0 END)           AS FEVEREIRO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 03 THEN VALOR ELSE 0 END)           AS MARCO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 04 THEN VALOR ELSE 0 END)           AS ABRIL
-                           , SUM(CASE WHEN MONTH(DTNEG) = 05 THEN VALOR ELSE 0 END)           AS MAIO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 06 THEN VALOR ELSE 0 END)           AS JUNHO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 07 THEN VALOR ELSE 0 END)           AS JULHO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 08 THEN VALOR ELSE 0 END)           AS AGOSTO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 09 THEN VALOR ELSE 0 END)           AS SETEMBRO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 10 THEN VALOR ELSE 0 END)           AS OUTUBRO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 11 THEN VALOR ELSE 0 END)           AS NOVEMBRO
-                           , SUM(CASE WHEN MONTH(DTNEG) = 12 THEN VALOR ELSE 0 END)           AS DEZEMBRO
-                           , SUM(VALOR)                                                       AS TOTAL
-                           , SUM((VALOR)) / ((MONTH('31/12/2022') - MONTH('01/01/2022')) + 1) AS MEDIA
-                           , 0                                                                AS AV_MEDIA
+                           , SUM(CASE WHEN MONTH (DTNEG) = 01 THEN VALOR ELSE 0 END)           AS JANEIRO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 02 THEN VALOR ELSE 0 END)           AS FEVEREIRO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 03 THEN VALOR ELSE 0 END)           AS MARCO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 04 THEN VALOR ELSE 0 END)           AS ABRIL
+                           , SUM(CASE WHEN MONTH (DTNEG) = 05 THEN VALOR ELSE 0 END)           AS MAIO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 06 THEN VALOR ELSE 0 END)           AS JUNHO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 07 THEN VALOR ELSE 0 END)           AS JULHO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 08 THEN VALOR ELSE 0 END)           AS AGOSTO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 09 THEN VALOR ELSE 0 END)           AS SETEMBRO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 10 THEN VALOR ELSE 0 END)           AS OUTUBRO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 11 THEN VALOR ELSE 0 END)           AS NOVEMBRO
+                           , SUM(CASE WHEN MONTH (DTNEG) = 12 THEN VALOR ELSE 0 END)           AS DEZEMBRO
+                           , SUM(VALOR)                                                        AS TOTAL
+                           , SUM((VALOR)) / ((MONTH('31/12/2022') - MONTH ('01/01/2022')) + 1) AS MEDIA
+                           , 0                                                                 AS AV_MEDIA
 
                       FROM CND_SQA_DRE_GER
 
@@ -919,9 +919,55 @@ WITH NATUREZA_PAI AS (SELECT CODNAT
                                 FROM NATUREZA_PAI
                                 WHERE ORDEM IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)) Z),
 
+     APURACAOIRPJ AS (SELECT CASE WHEN LEN(CODNAT) = 8 THEN '#f9f9f9' WHEN LEN(CODNAT) = 3 THEN '#06973a' END AS BKCOLOR
+                           , CASE WHEN LEN(CODNAT) = 8 THEN '#6d0a1a' WHEN LEN(CODNAT) = 3 THEN '#f9f9f9' END AS FGCOLOR
+                           , 51                                                                               AS ORDEM
+                           , 50000000                                                                         AS CODNATPAI
+                           , 50000000                                                                         AS CODNAT
+                           , '50000000 - APUR IRPJ'                                                           AS DESCRNAT
+                           , JANEIRO * 0.15                                                                   AS JANEIRO
+                           , FEVEREIRO * 0.15                                                                 AS FEVEREIRO
+                           , MARCO * 0.15                                                                     AS MARCO
+                           , ABRIL * 0.15                                                                     AS ABRIL
+                           , MAIO * 0.15                                                                      AS MAIO
+                           , JUNHO * 0.15                                                                     AS JUNHO
+                           , JULHO * 0.15                                                                     AS JULHO
+                           , AGOSTO * 0.15                                                                    AS AGOSTO
+                           , SETEMBRO * 0.15                                                                  AS SETEMBRO
+                           , OUTUBRO * 0.15                                                                   AS OUTUBRO
+                           , NOVEMBRO * 0.15                                                                  AS NOVEMBRO
+                           , DEZEMBRO * 0.15                                                                  AS DEZEMBRO
+                           , MEDIA * 0.15                                                                     AS MEDIA
+                           , (ABS(MEDIA) * 0.15 / (SELECT MEDIA FROM RECEITALIQUIDA)) * 100                   AS AV_MEDIA
+                           , TOTAL * 0.15                                                                     AS TOTAL
+                      FROM RESULTADOLIQUIDO),
+
+     APURACAOCSLL AS (SELECT CASE WHEN LEN(CODNAT) = 8 THEN '#f9f9f9' WHEN LEN(CODNAT) = 3 THEN '#06973a' END AS BKCOLOR
+                           , CASE WHEN LEN(CODNAT) = 8 THEN '#6d0a1a' WHEN LEN(CODNAT) = 3 THEN '#f9f9f9' END AS FGCOLOR
+                           , 52                                                                               AS ORDEM
+                           , 50000000                                                                         AS CODNATPAI
+                           , 50000000                                                                         AS CODNAT
+                           , '50000000 - APUR CSLL'                                                           AS DESCRNAT
+                           , JANEIRO * 0.09                                                                   AS JANEIRO
+                           , FEVEREIRO * 0.09                                                                 AS FEVEREIRO
+                           , MARCO * 0.09                                                                     AS MARCO
+                           , ABRIL * 0.09                                                                     AS ABRIL
+                           , MAIO * 0.09                                                                      AS MAIO
+                           , JUNHO * 0.09                                                                     AS JUNHO
+                           , JULHO * 0.09                                                                     AS JULHO
+                           , AGOSTO * 0.09                                                                    AS AGOSTO
+                           , SETEMBRO * 0.09                                                                  AS SETEMBRO
+                           , OUTUBRO * 0.09                                                                   AS OUTUBRO
+                           , NOVEMBRO * 0.09                                                                  AS NOVEMBRO
+                           , DEZEMBRO * 0.09                                                                  AS DEZEMBRO
+                           , MEDIA * 0.09                                                                     AS MEDIA
+                           , (ABS(MEDIA) * 0.09 / (SELECT MEDIA FROM RECEITALIQUIDA)) * 100                   AS AV_MEDIA
+                           , TOTAL * 0.09                                                                     AS TOTAL
+                      FROM RESULTADOLIQUIDO),
+
      MARGEMLIQUIDA AS (SELECT '#4a4a4d'                      AS BKCOLOR
                             , '#f9f9f9'                      AS FGCOLOR
-                            , 51                             AS ORDEM
+                            , 53                             AS ORDEM
                             , 0                              AS CODNATPAI
                             , 0                              AS CODNAT
                             , '<b>( = ) MAERGEM LIQUIDA</b>' AS DESCRCTA
@@ -1086,7 +1132,7 @@ WITH NATUREZA_PAI AS (SELECT CODNAT
 
      RESULTADO AS (SELECT '#2a7344'                AS BKCOLOR
                         , '#f9f9f9'                AS FGCOLOR
-                        , 50                       AS ORDEM
+                        , 300                      AS ORDEM
                         , 0                        AS CODNATPAI
                         , 0                        AS CODNAT
                         , '<b>( = ) RESULTADO</b>' AS DESCRCTA
@@ -1235,6 +1281,14 @@ UNION ALL
 
 SELECT *
 FROM RESULTADOLIQUIDO
+UNION ALL
+
+SELECT *
+FROM APURACAOIRPJ
+UNION ALL
+
+SELECT *
+FROM APURACAOCSLL
 UNION ALL
 
 SELECT *

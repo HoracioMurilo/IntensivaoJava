@@ -20,11 +20,33 @@ SELECT CAB.DTNEG          AS DTREF
      , AVO.CODNAT         AS CODNATAVO
      , AVO.DESCRNAT       AS DESCRNATAVO
      , CASE
-           WHEN CAB.TIPMOV = 'V' THEN SUM(ITE.VLRTOT)
-           WHEN CAB.TIPMOV = 'D' THEN SUM(ITE.VLRTOT) * -1
-           WHEN CAB.TIPMOV = 'C' THEN SUM(ITE.VLRTOT) * -1
-           WHEN CAB.TIPMOV = 'E' THEN SUM(ITE.VLRTOT)
+           WHEN CAB.TIPMOV = 'V' THEN (ITE.VLRTOT - ITE.VLRDESC - ITE.VLRREPRED + ITE.VLRSUBST + ITE.VLRIPI)
+           WHEN CAB.TIPMOV = 'D' THEN (ITE.VLRTOT - ITE.VLRDESC - ITE.VLRREPRED + ITE.VLRSUBST + ITE.VLRIPI) * -1
+           WHEN CAB.TIPMOV = 'C' THEN (ITE.VLRTOT - ITE.VLRDESC - ITE.VLRREPRED + ITE.VLRSUBST + ITE.VLRIPI) * -1
+           WHEN CAB.TIPMOV = 'E' THEN (ITE.VLRTOT - ITE.VLRDESC - ITE.VLRREPRED + ITE.VLRSUBST + ITE.VLRIPI)
     END                   AS VALOR
+     , CASE
+           WHEN CAB.TIPMOV = 'V' THEN (SELECT SUM(VALOR)
+                                       FROM TGFDIN
+                                       WHERE NUNOTA = ITE.NUNOTA
+                                         AND SEQUENCIA = ITE.SEQUENCIA
+                                         AND CODIMP IN (1, 4, 6, 7)) * -1
+           WHEN CAB.TIPMOV = 'D' THEN (SELECT SUM(VALOR)
+                                       FROM TGFDIN
+                                       WHERE NUNOTA = ITE.NUNOTA
+                                         AND SEQUENCIA = ITE.SEQUENCIA
+                                         AND CODIMP IN (1, 4, 6, 7))
+           WHEN CAB.TIPMOV = 'C' THEN (SELECT SUM(VALOR)
+                                       FROM TGFDIN
+                                       WHERE NUNOTA = ITE.NUNOTA
+                                         AND SEQUENCIA = ITE.SEQUENCIA
+                                         AND CODIMP IN (1, 4, 6, 7))
+           WHEN CAB.TIPMOV = 'E' THEN (SELECT SUM(VALOR)
+                                       FROM TGFDIN
+                                       WHERE NUNOTA = ITE.NUNOTA
+                                         AND SEQUENCIA = ITE.SEQUENCIA
+                                         AND CODIMP IN (1, 4, 6, 7)) * -1
+    END                   AS IMPOSTOS
      , 'ESTOQUE'          AS ORIGEM
      , CLAS.ORDEM                               -- PARA ORDERNAR
      , CLAS.CLASSIFICADOR AS NOME_CLASSIFICADOR -- PARA NOMEAR
@@ -42,39 +64,11 @@ FROM TGFCAB CAB
          INNER JOIN TGFTOP TTP ON TTP.CODTIPOPER = CAB.CODTIPOPER AND TTP.DHALTER = CAB.DHTIPOPER
          INNER JOIN AD_SQADRE CLAS ON CLAS.CODNAT = NAT.CODNAT
 
-WHERE SUBSTRING(CONVERT(VARCHAR(10), NAT.CODNAT), 1, 4) IN
+WHERE SUBSTRING(CONVERT(VARCHAR (10), NAT.CODNAT), 1, 4) IN
       (1001, 1002, 1003, 1102, 1201, 1202, 1203, 1205, 1206, 1207, 1208, 1209, 1210, 1211)
   AND CAB.STATUSNOTA = 'L'
   AND CAB.TIPMOV IN ('V', 'D', 'E', 'C')
   AND CAB.DTNEG BETWEEN :PERIODO.INI AND :PERIODO.FIN
-
-
-GROUP BY CAB.NUNOTA
-       , CAB.NUMNOTA
-       , CAB.CODPARC
-       , PAR.RAZAOSOCIAL
-       , CAB.DTNEG
-       , CAB.CODEMP
-       , CAB.CODTIPOPER
-       , TTP.DESCROPER
-       , CAB.CODCENCUS
-       , CUS.DESCRCENCUS
-       , CUSPAI.CODCENCUS
-       , CUSPAI.DESCRCENCUS
-       , CUSAVO.CODCENCUS
-       , CUSAVO.DESCRCENCUS
-       , CAB.CODNAT
-       , NAT.DESCRNAT
-       , PAI.CODNAT
-       , PAI.DESCRNAT
-       , AVO.CODNAT
-       , AVO.DESCRNAT
-       , TTP.GOLDEV
-       , CLAS.ORDEM
-       , CLAS.CLASSIFICADOR
-       , CAB.TIPMOV
-
-HAVING SUM(ITE.VLRTOT) > 0
 
 UNION ALL
 
@@ -96,7 +90,7 @@ SELECT CAB.DTNEG                                                                
      , 30000000                                                                                AS CODNAT
      , 'CMV '                                                                                  AS DESCRNAT
      , 30000000                                                                                AS CODNATPAI
-     , PAI.DESCRNAT AS DESCRNATPAI
+     , PAI.DESCRNAT                                                                            AS DESCRNATPAI
      , AVO.CODNAT                                                                              AS CODNATAVO
      , AVO.DESCRNAT                                                                            AS DESCRNATAVO
      , (((SELECT MAX(CUS.CUSMEDICM)
@@ -108,6 +102,28 @@ SELECT CAB.DTNEG                                                                
                                WHERE CN.CODPROD = CUS.CODPROD
                                  AND CN.DTATUAL <= CAB.DTNEG
                                  AND CN.CODEMP = CUS.CODEMP)) * ITE.QTDNEG) * TTP.GOLDEV) * -1 AS VALOR
+     , CASE
+           WHEN CAB.TIPMOV = 'V' THEN (SELECT SUM(VALOR)
+                                       FROM TGFDIN
+                                       WHERE NUNOTA = ITE.NUNOTA
+                                         AND SEQUENCIA = ITE.SEQUENCIA
+                                         AND CODIMP IN (1, 4, 6, 7)) * -1
+           WHEN CAB.TIPMOV = 'D' THEN (SELECT SUM(VALOR)
+                                       FROM TGFDIN
+                                       WHERE NUNOTA = ITE.NUNOTA
+                                         AND SEQUENCIA = ITE.SEQUENCIA
+                                         AND CODIMP IN (1, 4, 6, 7))
+           WHEN CAB.TIPMOV = 'C' THEN (SELECT SUM(VALOR)
+                                       FROM TGFDIN
+                                       WHERE NUNOTA = ITE.NUNOTA
+                                         AND SEQUENCIA = ITE.SEQUENCIA
+                                         AND CODIMP IN (1, 4, 6, 7))
+           WHEN CAB.TIPMOV = 'E' THEN (SELECT SUM(VALOR)
+                                       FROM TGFDIN
+                                       WHERE NUNOTA = ITE.NUNOTA
+                                         AND SEQUENCIA = ITE.SEQUENCIA
+                                         AND CODIMP IN (1, 4, 6, 7)) * -1
+    END                                                                                        AS IMPOSTOS
      , 'CUSTO'                                                                                 AS ORIGEM
      , 3                                                                                       AS ORDEM              -- PARA ORDERNAR
      , CLAS.CLASSIFICADOR                                                                      AS NOME_CLASSIFICADOR -- PARA NOMEAR
@@ -128,31 +144,6 @@ FROM TGFCAB CAB
 WHERE TTP.GOLSINAL = -1
   AND CAB.STATUSNOTA = 'L'
   AND CAB.DTNEG BETWEEN :PERIODO.INI AND :PERIODO.FIN
-
-GROUP BY CAB.NUNOTA
-       , CAB.NUMNOTA
-       , CAB.CODPARC
-       , PAR.RAZAOSOCIAL
-       , CAB.DTNEG
-       , CAB.CODEMP
-       , CAB.CODTIPOPER
-       , TTP.DESCROPER
-       , CAB.CODCENCUS
-       , CUS.DESCRCENCUS
-       , CUSPAI.CODCENCUS
-       , CUSPAI.DESCRCENCUS
-       , CUSAVO.CODCENCUS
-       , CUSAVO.DESCRCENCUS
-       , CAB.CODNAT
-       , NAT.DESCRNAT
-       , PAI.CODNAT
-       , PAI.DESCRNAT
-       , AVO.CODNAT
-       , AVO.DESCRNAT
-       , ITE.CODPROD
-       , ITE.QTDNEG
-       , TTP.GOLDEV
-       , CLAS.CLASSIFICADOR
 
 UNION ALL
 
@@ -178,6 +169,7 @@ SELECT CAB.DTNEG                  AS DTREF
      , AVO.CODNAT                 AS CODNATAVO
      , AVO.DESCRNAT               AS DESCRNATAVO
      , SUM(VALOR) * -1            AS VALOR
+     , 0                          AS IMPOSTOS
      , 'IMPOSTOS'                 AS ORIGEM
      , 2                          AS ORDEM
      , (SELECT OPCAO
@@ -204,7 +196,7 @@ WHERE TTP.GOLSINAL = -1
   AND CAB.STATUSNOTA = 'L'
   AND CAB.TIPMOV IN ('V', 'D', 'E', 'C')
   AND CAB.DTNEG BETWEEN :PERIODO.INI AND :PERIODO.FIN
-  AND DIN.CODIMP IN (1,4,6,7)
+  AND DIN.CODIMP IN (1, 4, 6, 7)
 
 
 GROUP BY CAB.NUNOTA
@@ -229,11 +221,9 @@ GROUP BY CAB.NUNOTA
        , AVO.DESCRNAT
        , DIN.CODIMP
 
-HAVING SUM(VALOR) > 0
-
 UNION ALL
 
-SELECT FIN.DTNEG                        AS DTREF
+SELECT FIN.DTNEG                   AS DTREF
      , FIN.NUFIN
      , FIN.NUMNOTA
      , FIN.CODPARC
@@ -244,20 +234,21 @@ SELECT FIN.DTNEG                        AS DTREF
      , TTP.DESCROPER
      , FIN.CODCENCUS
      , CUS.DESCRCENCUS
-     , CUSPAI.CODCENCUS                 AS CODCENCUSPAI
-     , CUSPAI.DESCRCENCUS               AS DESCRCENCUSPAI
-     , CUSAVO.CODCENCUS                 AS CODCENCUSAVO
-     , CUSAVO.DESCRCENCUS               AS DESCRCENCUSAVO
+     , CUSPAI.CODCENCUS            AS CODCENCUSPAI
+     , CUSPAI.DESCRCENCUS          AS DESCRCENCUSPAI
+     , CUSAVO.CODCENCUS            AS CODCENCUSAVO
+     , CUSAVO.DESCRCENCUS          AS DESCRCENCUSAVO
      , FIN.CODNAT
      , NAT.DESCRNAT
-     , PAI.CODNAT                       AS CODNATPAI
-     , PAI.DESCRNAT                     AS DESCRNATPAI
-     , AVO.CODNAT                       AS CODNATAVO
-     , AVO.DESCRNAT                     AS DESCRNATAVO
-     , SUM(FIN.VLRDESDOB) * FIN.RECDESP AS VALOR
-     , 'FINANCEIRO'                     AS ORIGEM
-     , CLAS.ORDEM                                             -- PARA ORDERNAR
-     , CLAS.CLASSIFICADOR               AS NOME_CLASSIFICADOR -- PARA NOMEAR
+     , PAI.CODNAT                  AS CODNATPAI
+     , PAI.DESCRNAT                AS DESCRNATPAI
+     , AVO.CODNAT                  AS CODNATAVO
+     , AVO.DESCRNAT                AS DESCRNATAVO
+     , FIN.VLRDESDOB * FIN.RECDESP AS VALOR
+     , 0                           AS IMPOSTOS
+     , 'FINANCEIRO'                AS ORIGEM
+     , CLAS.ORDEM                                        -- PARA ORDERNAR
+     , CLAS.CLASSIFICADOR          AS NOME_CLASSIFICADOR -- PARA NOMEAR
 
 
 FROM TGFFIN FIN
@@ -272,33 +263,7 @@ FROM TGFFIN FIN
          INNER JOIN TGFTOP TTP ON TTP.CODTIPOPER = FIN.CODTIPOPER AND TTP.DHALTER = FIN.DHTIPOPER
          INNER JOIN AD_SQADRE CLAS ON CLAS.CODNAT = NAT.CODNAT
 
-WHERE SUBSTRING(CONVERT(VARCHAR(10), NAT.CODNAT), 1, 4) IN
+WHERE SUBSTRING(CONVERT(VARCHAR (10), NAT.CODNAT), 1, 4) IN
       (1001, 1002, 1003, 1102, 1201, 1202, 1203, 1205, 1206, 1207, 1208, 1209, 1210, 1211)
   AND FIN.ORIGEM IN ('F', 'P')
   AND FIN.DTNEG BETWEEN :PERIODO.INI AND :PERIODO.FIN
-
-GROUP BY FIN.NUFIN
-       , FIN.NUMNOTA
-       , FIN.CODPARC
-       , PAR.RAZAOSOCIAL
-       , FIN.DTNEG
-       , FIN.CODEMP
-       , FIN.CODTIPOPER
-       , TTP.DESCROPER
-       , FIN.CODCENCUS
-       , CUS.DESCRCENCUS
-       , CUSPAI.CODCENCUS
-       , CUSPAI.DESCRCENCUS
-       , CUSAVO.CODCENCUS
-       , CUSAVO.DESCRCENCUS
-       , FIN.CODNAT
-       , NAT.DESCRNAT
-       , PAI.CODNAT
-       , PAI.DESCRNAT
-       , AVO.CODNAT
-       , AVO.DESCRNAT
-       , CLAS.ORDEM
-       , CLAS.CLASSIFICADOR
-       , FIN.RECDESP
-
-HAVING SUM(FIN.VLRDESDOB) > 0

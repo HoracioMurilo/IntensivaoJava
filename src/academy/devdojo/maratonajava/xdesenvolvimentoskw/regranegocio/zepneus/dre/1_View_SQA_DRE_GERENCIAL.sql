@@ -49,40 +49,60 @@ ALTER VIEW SQA_DRE_GERENCIAL AS
           UNION ALL
 
           SELECT
-              CAB.DTNEG AS DTREF
-               , MONTH(CAB.DTNEG) AS MES
-               , YEAR(CAB.DTNEG) AS ANO
-               , CAB.CODEMP
-               , CAB.CODCENCUS
-               , CUS.DESCRCENCUS
-               , 30000000                                                                                AS CODNAT
-               , 'CMV '                                                                                  AS DESCRNAT
-               , (((SELECT MAX(CUS.CUSMEDICM)
-                    FROM TGFCUS CUS
-                    WHERE CUS.CODPROD = ITE.CODPROD
-                      AND CUS.CODEMP = CAB.CODEMP
-                      AND CUS.DTATUAL = (SELECT MAX(CN.DTATUAL)
-                                         FROM TGFCUS CN
-                                         WHERE CN.CODPROD = CUS.CODPROD
-                                           AND CN.DTATUAL <= CAB.DTNEG
-                                           AND CN.CODEMP = CUS.CODEMP)) * ITE.QTDNEG) * TTP.GOLDEV) * -1 AS VALOR
+              Z.DTNEG AS DTREF
+               , MONTH(Z.DTNEG) AS MES
+               , YEAR(Z.DTNEG) AS ANO
+               , Z.CODEMP
+               , Z.CODCENCUS
+               , Z.DESCRCENCUS
+               , 30000000 AS CODNAT
+               , 'CMV ' AS DESCRNAT
+               , ROUND(SUM(CASE WHEN Z.TIPMOV = 'V' THEN CUSTOTOTAL * (-1) ELSE CUSTOTOTAL * (1) END), 2) AS VALOR
                ,'CUSTO' AS ORIGEM
                , 3 AS ORDEM
-               , CLAS.CLASSIFICADOR AS NOME_CLASSIFICADOR
+               , Z.CLASSIFICADOR AS NOME_CLASSIFICADOR
 
-          FROM TGFCAB CAB
+          FROM (
+                   SELECT
+                       CAB.CODEMP
+                        , CAB.NUMNOTA
+                        , CAB.CODNAT
+                        , CAB.CODCENCUS
+                        , CUS.DESCRCENCUS
+                        , CLAS.CLASSIFICADOR
+                        , CAB.DTNEG
+                        , CAB.TIPMOV
+                        , ISNULL((SELECT SUM(C.CUSSEMICM*I.QTDNEG)
+                                  FROM TGFCUS C, TGFITE I
+                                  WHERE I.NUNOTA = CAB.NUNOTA
+                                    AND C.CODEMP = I.CODEMP
+                                    AND C.CODPROD = I.CODPROD
+                                    AND C.DTATUAL = (SELECT MAX(DTATUAL)
+                                                     FROM TGFCUS
+                                                     WHERE CODEMP = C.CODEMP
+                                                       AND CODPROD = C.CODPROD AND DTATUAL <= CAB.DTNEG)),0) AS CUSTOTOTAL
 
-                   INNER JOIN TGFTOP TTP ON TTP.CODTIPOPER = CAB.CODTIPOPER AND TTP.DHALTER = CAB.DHTIPOPER
-                   INNER JOIN TGFNAT NAT ON NAT.CODNAT = CAB.CODNAT
-                   LEFT JOIN TSICUS CUS ON CUS.CODCENCUS = CAB.CODCENCUS
-                   INNER JOIN TGFITE ITE ON ITE.NUNOTA = CAB.NUNOTA
-                   INNER JOIN AD_SQADRE CLAS ON CLAS.CODNAT = NAT.CODNAT
+                   FROM TGFCAB CAB INNER JOIN TGFTOP TPO (NOLOCK) ON CAB.CODTIPOPER = TPO.CODTIPOPER AND CAB.DHTIPOPER = TPO.DHALTER
+                                   LEFT JOIN  TSICUS CUS (NOLOCK) ON CUS.CODCENCUS = CAB.CODCENCUS
+                                   INNER JOIN AD_SQADRE CLAS (NOLOCK) ON CLAS.CODNAT = CAB.CODNAT
 
-          WHERE
-                  TTP.GOLSINAL = -1
-            AND CAB.STATUSNOTA = 'L'
-            AND CAB.DTNEG BETWEEN '01/01/2022' AND '31/12/2022'
-            AND CAB.CODEMP = 408
+                   WHERE CAB.STATUSNOTA = 'L'
+                     AND TPO.ATUALFIN <> 0
+                     AND TPO.CODTIPOPER NOT IN (188, 1003, 403, 852, 365,7010,1015)
+                     AND CAB.TIPMOV IN ('V','D')
+                     AND CAB.DTNEG BETWEEN '01/01/2022' AND '31/12/2022'
+                     AND CAB.CODEMP = 408
+               )Z
+
+          GROUP BY
+
+              Z.DTNEG
+                 , MONTH(Z.DTNEG)
+                 , YEAR(Z.DTNEG)
+                 , Z.CODEMP
+                 , Z.CODCENCUS
+                 , Z.DESCRCENCUS
+                 , Z.CLASSIFICADOR
 
           UNION ALL
 

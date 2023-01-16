@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13bedcac-e979-4e7f-a617-efa748661288" name="Changes" comment="Commit 30/11/2022">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/Altera_NaturezaDev.sql" afterDir="false" />
+    <list default="true" id="13bedcac-e979-4e7f-a617-efa748661288" name="Changes" comment="exclusão">
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Ycolecoes/dominio/Smartphone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Ycolecoes/test/EqualsTest01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html/estudos/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html/estudos/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html/estudos/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html/meusite/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html/meusite/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/constance/dre/TESTE COM PIVOT.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/constance/use/cab/cabUse.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/ztreino/Aluno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/ztreino/listas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraCentroResultado.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/AlteraCentroResultado.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraDataNegociacao.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/AlteraDataNegociacao.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraNatureza.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/AlteraNatureza.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/AlteraTopBaixa.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/AlteraTopBaixa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/GerarFinanceiro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/GerarFinanceiro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/Modelo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/Modelo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/dominio/PreencheNroAutorização.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/javascript/PreencheNroAutorização.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/painel/css/relcomercial.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5/css/relcomercial.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/painel/painel_SQA.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5/painel_SQA.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Wnio/test/SimpleFileVisitorTest01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Wnio/test/SimpleFileVisitorTest01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5/painel_SQA.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5/painel_SQA.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/zepneus/dre/1_View_SQA_DRE_GERENCIAL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/zepneus/dre/1_View_SQA_DRE_GERENCIAL.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +29,9 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Class" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -45,39 +48,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "G:/Meu Drive/Desenvolvimento SQA/02 - PROGRAMAÇÃO/20 - DevDojoJava/maratona-java/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Meu Drive/Desenvolvimento SQA/02 - PROGRAMAÇÃO/20 - DevDojoJava/maratona-java/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/constance/dfc&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\regranegocio\constance\dfc" />
       <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\regranegocio" />
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\javacore\Wnio\test" />
       <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\dominio" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\regranegocio\alvorada" />
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\regranegocio\zepneus\novo" />
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\regranegocio\horaciotec" />
+      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\regranegocio\constance\dre" />
       <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\painel" />
-      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\painel\css" />
-      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\src\academy\devdojo\maratonajava\xdesenvolvimentoskw\teste" />
-      <recent name="G:\Meu Drive\Desenvolvimento SQA\02 - PROGRAMAÇÃO\20 - DevDojoJava\maratona-java\home\william\dev" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="academy.devdojo.maratonajava.javacore.Uregex.test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimpleFileVisitorTest01 (4)">
+  <component name="RunManager" selected="Application.listas">
+    <configuration name="EqualsTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Ycolecoes.test.EqualsTest01" />
+      <module name="maratona-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.maratonajava.javacore.Ycolecoes.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SimpleFileVisitorTest01 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.SimpleFileVisitorTest01" />
       <module name="maratona-java" />
@@ -117,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleFileVisitorTest01 (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="SimpleFileVisitorTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.SimpleFileVisitorTest01" />
       <module name="maratona-java" />
       <extension name="coverage">
@@ -143,13 +162,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SimpleFileVisitorTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.javacore.Wnio.test.SimpleFileVisitorTest01" />
+      <module name="maratona-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.maratonajava.javacore.Wnio.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="listas" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.devdojo.maratonajava.xdesenvolvimentoskw.ztreino.listas" />
+      <module name="maratona-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.devdojo.maratonajava.xdesenvolvimentoskw.ztreino.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SimpleFileVisitorTest01 (4)" />
+        <item itemvalue="Application.listas" />
+        <item itemvalue="Application.EqualsTest01" />
         <item itemvalue="Application.SimpleFileVisitorTest01 (3)" />
         <item itemvalue="Application.SimpleFileVisitorTest01 (2)" />
         <item itemvalue="Application.SimpleFileVisitorTest01 (1)" />
-        <item itemvalue="Application.SimpleFileVisitorTest01" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +222,30 @@
       <workItem from="1669805484891" duration="6545000" />
       <workItem from="1669843522427" duration="1897000" />
       <workItem from="1670350452024" duration="5650000" />
-      <workItem from="1670501094304" duration="2400000" />
+      <workItem from="1670501094304" duration="3293000" />
+      <workItem from="1670710483372" duration="280000" />
+      <workItem from="1670854812720" duration="675000" />
+      <workItem from="1670892640933" duration="5391000" />
+      <workItem from="1670945303781" duration="1181000" />
+      <workItem from="1671022845434" duration="757000" />
+      <workItem from="1671033867379" duration="12681000" />
+      <workItem from="1671221484373" duration="2002000" />
+      <workItem from="1671288720390" duration="11767000" />
+      <workItem from="1671314125472" duration="976000" />
+      <workItem from="1671451548109" duration="659000" />
+      <workItem from="1671570503626" duration="1115000" />
+      <workItem from="1671633905773" duration="6460000" />
+      <workItem from="1671711467676" duration="7243000" />
+      <workItem from="1673131941482" duration="2879000" />
+      <workItem from="1673356934231" duration="11776000" />
+      <workItem from="1673381674177" duration="1331000" />
+      <workItem from="1673383861526" duration="18000" />
+      <workItem from="1673383884333" duration="227000" />
+      <workItem from="1673435413525" duration="14351000" />
+      <workItem from="1673524796886" duration="6015000" />
+      <workItem from="1673552914918" duration="5300000" />
+      <workItem from="1673618077225" duration="12783000" />
+      <workItem from="1673877911354" duration="2564000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - InteliJ">
       <created>1667416661130</created>
@@ -249,7 +317,77 @@
       <option name="project" value="LOCAL" />
       <updated>1670501924253</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Commit 30/11/2022">
+      <created>1670509144592</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670509144592</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Commit 30/11/2022">
+      <created>1670509861727</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670509861727</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Commit 30/11/2022">
+      <created>1673369566197</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673369566197</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Commit 30/11/2022">
+      <created>1673369634019</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673369634019</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Commit 30/11/2022">
+      <created>1673482603967</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673482603968</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Nova versão DRE Zp">
+      <created>1673715468241</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673715468241</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Nova versão DRE Zp">
+      <created>1673715501149</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673715501149</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Nova versão DRE Zp">
+      <created>1673715610692</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673715610692</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Melhoria Botão checkin lançamento">
+      <created>1673715659526</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1673715659527</updated>
+    </task>
+    <task id="LOCAL-00020" summary="exclusão">
+      <created>1673715680429</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1673715680429</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +421,9 @@
     <MESSAGE value="Commit 12-11" />
     <MESSAGE value="Alteração da Consulta" />
     <MESSAGE value="Commit 30/11/2022" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 30/11/2022" />
+    <MESSAGE value="Nova versão DRE Zp" />
+    <MESSAGE value="Melhoria Botão checkin lançamento" />
+    <MESSAGE value="exclusão" />
+    <option name="LAST_COMMIT_MESSAGE" value="exclusão" />
   </component>
 </project>

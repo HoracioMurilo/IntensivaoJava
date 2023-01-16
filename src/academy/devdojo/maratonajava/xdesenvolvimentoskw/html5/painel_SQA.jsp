@@ -54,7 +54,7 @@
             var params = {
                 CODPARC: parseInt('&{CODPARC}')
             };
-            openApp('br.com.sankhya.menu.adicional.nuDsb.168.1', params);
+            openApp('br.com.sankhya.menu.adicional.nuDsb.57.1', params);
         }
     </script>
 
@@ -141,7 +141,7 @@
     <!-- linha 4  -->
     <tr>
         <td class="listatdtipo"><a href="javascript:analiseDespesas(88)"> <span style="color:black">
-            Analise das Despesas </span></a>
+            Analise das Despesas Op. </span></a>
         <td class="listatdtipo"><a href="javascript:bcclienteprincipal(88)"> <span style="color:black"> Em Desenvolvimento </span></a>
         <td class="listatdtipo"><a href="javascript:bcclienteprincipal(88)"> <span
                 style="color:black"> Dashboards2 </span></a>

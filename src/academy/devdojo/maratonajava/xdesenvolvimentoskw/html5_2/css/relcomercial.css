@@ -1,0 +1,47 @@
+button.right  {
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    box-shadow: 3px 3px 5px 0px #000000;
+    transition: background-color 0.5s ease;
+
+}
+
+button.left  {
+    border: 2px solid green;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    box-shadow: 3px 3px 5px 0px #000000;
+    transition: background-color 0.5s ease;
+
+}
+
+button:hover {
+    background-color: #008c3d;
+}
+
+
+@media (max-width: 600px) {
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

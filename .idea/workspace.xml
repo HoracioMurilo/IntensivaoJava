@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13bedcac-e979-4e7f-a617-efa748661288" name="Changes" comment="commit 16-01-2023">
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Ycolecoes/test/ShmartPhoneListTest01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5_2/css/relcomercial.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5_2/painel_SQA2.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/html5_2/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/icrop/Function_Coleta_Empresa.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Ycolecoes/dominio/Smartphone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/javacore/Ycolecoes/dominio/Smartphone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/alvorada/analisevendas/1.View_SQA_DADOS_GERENCIAL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/alvorada/analisevendas/1.View_SQA_DADOS_GERENCIAL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/horaciotec/V1_MEDIA.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/horaciotec/dados.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/horaciotec/kardex/1.createtable_HVL_MOVIMENTO_ESTOQUE.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/horaciotec/kardex/1.createtable_HVL_MOVIMENTO_ESTOQUE.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/alvorada/Dre/1_View_SQA_DRE_GERENCIAL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/alvorada/Dre/1_View_SQA_DRE_GERENCIAL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/horaciotec/1. V1 MÉDIA" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/horaciotec/1. V1 MÉDIA.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/horaciotec/kardex/5.createprocedure_STP_REGRA.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/horaciotec/kardex/5.createprocedure_STP_REGRA.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/zepneus/dre/3_Dashboard_DADOS.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/academy/devdojo/maratonajava/xdesenvolvimentoskw/regranegocio/zepneus/dre/3_Dashboard_DADOS.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +226,8 @@
       <workItem from="1674567177237" duration="8000" />
       <workItem from="1674654001188" duration="4369000" />
       <workItem from="1674753118255" duration="5564000" />
-      <workItem from="1674815257274" duration="733000" />
+      <workItem from="1674815257274" duration="10043000" />
+      <workItem from="1674929782674" duration="921000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit - InteliJ">
       <created>1667416661130</created>
@@ -405,7 +397,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674470643524</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="commit 16-01-2023">
+      <created>1674825630330</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1674825630330</updated>
+    </task>
+    <task id="LOCAL-00026" summary="commit 16-01-2023">
+      <created>1674825688383</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1674825688383</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

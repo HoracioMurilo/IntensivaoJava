@@ -15,7 +15,6 @@ AS
     v_CUSTO_MEDIO_PONDERADO FLOAT;
     v_CODEMP_OLD            int ;
     v_CODPROD_OLD           int ;
-    v_TESTE                 INT;
     CURSOR c1 IS
         SELECT ROWNUM
              , DTENTSAI
@@ -27,8 +26,6 @@ AS
              , VLRTOT
              , ESTOQUE_ACUMULADO
         FROM HVL_MOVIMENTO_ESTOQUE
-        WHERE CODPROD = 2153
-          AND CODEMP = 2
         ORDER BY CODEMP, CODPROD, DTENTSAI;
 
 BEGIN
@@ -39,7 +36,6 @@ BEGIN
     v_DTENTSAI := '01/01/1999';
     v_CODPROD_OLD := 0;
     v_CODEMP_OLD := 0;
-    v_TESTE := 0;
 
 
     OPEN c1;
@@ -50,19 +46,26 @@ BEGIN
         /*VALIDA SE A EMPRESA E O PRODUTO CONTINUAM SENDO O MESMO*/
         IF v_CODEMP = v_CODEMP_OLD AND v_CODPROD = v_CODPROD_OLD THEN
 
-            IF v_ATUALESTOQUE = -1 THEN
-                v_TESTE := v_TESTE - v_QTDNEG;
-            end if;
-
             /*VALIDA SE É UMA COMPRA SE FOR SOMA QTDNEG E VLR TOT*/
             IF v_ATUALESTOQUE = 1 THEN
-
-                V_TESTE := v_TESTE + v_QTDNEG;
-
                 v_QTDNEG_TOTAL := v_QTDNEG_TOTAL + v_QTDNEG;
                 v_VLRTOT_TOTAL := v_VLRTOT_TOTAL + v_VLRTOT;
                 v_CUSTO_MEDIO_PONDERADO := v_VLRTOT_TOTAL / v_QTDNEG_TOTAL;
             END IF;
+
+            IF v_ATUALESTOQUE = -1 THEN
+                IF v_ESTOQUE_ACUMULADO = 0 THEN
+                    UPDATE HVL_MOVIMENTO_ESTOQUE
+                    SET CUSTO_MEDIO_PONDERADO = v_CUSTO_MEDIO_PONDERADO
+                    WHERE DTENTSAI = v_DTENTSAI
+                      AND CODPROD = v_CODPROD
+                      AND CODEMP = v_CODEMP;
+
+                    v_QTDNEG_TOTAL := 0;
+                    v_VLRTOT_TOTAL := 0;
+                    v_CUSTO_MEDIO_PONDERADO := 0;
+                end if;
+            end if;
 
             UPDATE HVL_MOVIMENTO_ESTOQUE
             SET CUSTO_MEDIO_PONDERADO = v_CUSTO_MEDIO_PONDERADO
@@ -70,20 +73,9 @@ BEGIN
               AND CODPROD = v_CODPROD
               AND CODEMP = v_CODEMP;
 
-            /*VALIDA SE O ESTOQUE ZEROU, POIS SE ZERAR A MÉDIA RECOMEÇA*/
-            IF v_ESTOQUE_ACUMULADO = 0 THEN
-                v_QTDNEG_TOTAL := 0;
-                v_VLRTOT_TOTAL := 0;
-                v_CUSTO_MEDIO_PONDERADO := 0;
-            END IF;
-
         ELSE
-
             /*AQUI É RECOMEÇADO A MÉDIA QUANDO TEMOS A ADIÇÃO DE UM OUTRO PRODUTO/EMPRESA*/
             IF v_ATUALESTOQUE = 1 THEN
-
-                V_TESTE := v_TESTE + v_QTDNEG;
-
                 v_QTDNEG_TOTAL := v_QTDNEG;
                 v_VLRTOT_TOTAL := v_VLRTOT;
                 v_CUSTO_MEDIO_PONDERADO := v_VLRTOT_TOTAL / v_QTDNEG_TOTAL;

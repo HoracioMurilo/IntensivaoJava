@@ -1,4 +1,4 @@
-create PROCEDURE CALCULAR_CUSTO_MEDIO
+create OR REPLACE PROCEDURE CALCULAR_CUSTO_MEDIO
 AS
     v_DTENTSAI              DATE;
     v_CODEMP                INT;
@@ -95,5 +95,5 @@ BEGIN
     CLOSE c1;
 
 end;
-/
+
 
